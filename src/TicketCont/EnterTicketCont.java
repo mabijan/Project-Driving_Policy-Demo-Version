@@ -155,30 +155,32 @@ public class EnterTicketCont {
             String w1 = String.valueOf(CarCardCode.charAt(0));
             String w2 = String.valueOf(CarCardCode.charAt(1));
 
-            if (Character.isDigit(CarCardCode.charAt(i)) || (w1.equals("I")) == false || (w2.equals("R")) == false)
-            { key6 = false; } else { key6 = true; }
+            if (Character.isDigit(CarCardCode.charAt(i)) && (w1.equals("I")) == false && (w2.equals("R")) == false)
+            { key6 = false; }
+            
+            if (key6 == false) break;
         }
 
         System.out.println("key6:" + key6);
 
         for (int i = 0;i < 2;i++) {
 
-            if (Car_Tag1.length() != 2 || Character.isDigit(Car_Tag1.charAt(i)) == false) { key1 = false; }
+            if (Car_Tag1.length() != 2 || Character.isDigit(Car_Tag1.charAt(i)) == false) { key7 = false; }
 
-            if (key1 == false) break;
+            if (key7 == false) break;
         }
 
         System.out.println("key7:" + key7);
 
-        if (Car_Tag2.length() != 1 || Character.isDigit(Car_Tag2.charAt(0))) { key2 = false; }
+        if (Car_Tag2.length() != 1 || Character.isDigit(Car_Tag2.charAt(0))) { key8 = false; }
 
         System.out.println("key8:" + key8);
 
         for (int i = 0;i < 5;i++) {
 
-            if (Car_Tag3.length() != 5 || Character.isDigit(Car_Tag3.charAt(i)) == false) { key3 = false; }
+            if (Car_Tag3.length() != 5 || Character.isDigit(Car_Tag3.charAt(i)) == false) { key9 = false; }
 
-            if (key3 == false) break;
+            if (key9 == false) break;
         }
 
         System.out.println("key9:" + key9);
